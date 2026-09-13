@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="quiz-container">
+
+        <!-- INTRODUÇÃO -->
+        <section id="intro"lass="screen">
+            <h1>Qual rato você seria?</h1>
+            <p>Descubra qual rato do deserto do Chihuahua você seria, com 13 resultados possíveis!</p>
+            <p></p>
+
+            <button onclick="startQuiz()">Começar</button>
+        </section>
+
+
+        <!-- PERGUNTAS -->
+        <section id="quiz" class="screen hidden">
+
+            <div class="progress">
+                <span id="question-number">1</span> / 13
+            </div>
+
+            <h2 id="question"></h2>
+
+            <div id="answers"></div>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+        <section id="result" class="screen hidden">
+
+            <p>Seu resultado é...</p>
+
+            <h1 id="result-title"></h1>
+
+            <p id="result-description"></p>
+
+            <img id="result-image" class="result-image" src="" alt="Rato resultado">
+
+            <h2 id="result-name"></h2>
+            <p id="result-description"></p>
+
+            <button onclick="restartQuiz()">Fazer novamente</button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,243 @@
+/* ========================================
+   RATINHOS DO DESERTO 🐭🌵
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+
+    /* Céu clarinho de fim de tarde */
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.7) 0 3px, transparent 4px),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.5) 0 2px, transparent 3px),
+        #f6dfbd;
+
+    color: #5a4032;
+}
+
+
+/* ========================================
+   CAIXINHA PRINCIPAL
+   ======================================== */
+
+.quiz-container {
+    width: min(90%, 600px);
+
+    background: #fffaf1;
+    padding: 40px;
+
+    border-radius: 28px;
+
+    /* Sombrinha suave, como se estivesse sobre a areia */
+    box-shadow:
+        0 12px 0 #d7a878,
+        0 18px 30px rgba(91, 60, 40, 0.15);
+
+    border: 3px solid #e8bd8d;
+
+    text-align: center;
+
+    position: relative;
+}
+
+
+/* Pequenos detalhes decorativos */
+.quiz-container::before {
+    content: "🌵";
+    position: absolute;
+    top: -25px;
+    left: 25px;
+    font-size: 30px;
+    transform: rotate(-8deg);
+}
+
+.quiz-container::after {
+    content: "🐭";
+    position: absolute;
+    top: -29px;
+    right: 25px;
+    font-size: 34px;
+    transform: rotate(8deg);
+}
+
+
+/* ========================================
+   TELAS
+   ======================================== */
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* ========================================
+   TÍTULOS
+   ======================================== */
+
+h1 {
+    font-size: 2.2rem;
+    color: #8b543c;
+
+    margin-bottom: 5px;
+
+    text-shadow: 2px 2px 0 #f2d2a9;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #704936;
+}
+
+
+/* ========================================
+   BOTÕES
+   ======================================== */
+
+button {
+    border: 2px solid #c9825c;
+    border-radius: 16px;
+
+    padding: 14px 20px;
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background: #e9ad7d;
+    color: #583b2e;
+
+    box-shadow: 0 4px 0 #b96f4e;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: #f0bd8e;
+
+    box-shadow: 0 6px 0 #b96f4e;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #b96f4e;
+}
+
+
+/* ========================================
+   RESPOSTAS
+   ======================================== */
+
+#answers {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.answer {
+    width: 100%;
+
+    background: #fff3df;
+
+    border: 2px solid #e4c19a;
+    border-radius: 14px;
+
+    color: #604536;
+
+    box-shadow: 0 3px 0 #d8b182;
+}
+
+.answer:hover {
+    background: #fff8eb;
+
+    border-color: #c9825c;
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   PROGRESSO
+   ======================================== */
+
+.progress {
+    font-size: 0.9rem;
+    font-weight: bold;
+
+    color: #a06b4d;
+
+    background: #f4dfc2;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    display: inline-block;
+
+    align-self: center;
+
+    border: 1px dashed #c79568;
+}
+
+
+/* ========================================
+   DETALHES EXTRAS DO DESERTO
+   ======================================== */
+
+/* Uma linha decorativa fofinha */
+.quiz-container {
+    overflow: visible;
+}
+
+/* Seleção de texto */
+::selection {
+    background: #e9ad7d;
+    color: #fffaf1;
+}
+
+.result-image {
+    width: 220px;
+    height: 220px;
+
+    object-fit: contain;
+
+    margin: 5px auto 10px;
+
+    background: #f4dfc2;
+
+    border: 4px solid #e8bd8d;
+    border-radius: 50%;
+
+    padding: 12px;
+
+    box-shadow:
+        0 5px 0 #d19b6d,
+        0 10px 18px rgba(91, 60, 40, 0.12);
+
+    transition: transform 0.2s ease;
+}
+
+.result-image:hover {
+    transform: rotate(-3deg) scale(1.03);
+}
